@@ -7,10 +7,10 @@ const timeoutduration = 1000;
 
 const PORT = process.env.PORT;
 
-const server = express();
+const server = express()
    // Make the express server serve static assets (html, javascript, css) from the /public folder
   .use(express.static('public'))
-  .listen(PORT, '0.0.0.0', 'localhost', () => console.log(`Listening on ${ process.env.PORT }`));
+  .listen(PORT, '0.0.0.0', 'localhost', () => console.log('Listening on ${ PORT }'));
 
 // Create the WebSockets server
 const wss = new SocketServer({ server });
